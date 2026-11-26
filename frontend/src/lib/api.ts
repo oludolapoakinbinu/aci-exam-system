@@ -1,4 +1,16 @@
+// Same-origin Netlify/Next API by default. Render free SQLite is ephemeral, so
+ // pointing the browser at it causes "Attempt not found" after sleep/redeploy.
 const BASE = process.env.NEXT_PUBLIC_API_URL?.replace(/\/$/, "") || "";
+
+function errorMessage(text: string, fallback: string) {
+  try {
+    const j = JSON.parse(text) as { detail?: unknown };
+    if (typeof j.detail === "string") return j.detail;
+  } catch {
+    /* plain text */
+  }
+  return text || fallback;
+}
 
 async function req<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${BASE}${path}`, {
@@ -11,7 +23,7 @@ async function req<T>(path: string, init?: RequestInit): Promise<T> {
   });
   if (!res.ok) {
     const text = await res.text();
-    throw new Error(text || res.statusText);
+    throw new Error(errorMessage(text, res.statusText));
   }
   return res.json() as Promise<T>;
 }
@@ -126,17 +138,53 @@ export const api = {
   topics: () => req<Topic[]>("/api/topics"),
   stats: () => req<Stats>("/api/stats"),
   startAttempt: (body: Record<string, unknown>) =>
-    req<AttemptStart>("/api/attempts", { method: "POST", body: JSON.stringify(body) }),
-  submitAttempt: (
+    // Always create attempts on same-origin (Netlify) so submit/review stay consistent.
+    fetch("/api/attempts", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+      cache: "no-store",
+    }).then(async (res) => {
+      if (!res.ok) throw new Error(errorMessage(await res.text(), res.statusText));
+      return res.json() as Promise<AttemptStart>;
+    }),
+  submitAttempt: async (
     id: number,
     answers: unknown[],
     extra?: { mode?: string; started_at?: string }
-  ) =>
-    req<AttemptResult>(`/api/attempts/${id}/submit`, {
-      method: "POST",
-      body: JSON.stringify({ answers, ...extra }),
-    }),
+  ) => {
+    const body = { answers, ...extra };
+    try {
+      return await fetch(`/api/attempts/${id}/submit`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(body),
+        cache: "no-store",
+      }).then(async (res) => {
+        if (!res.ok) throw new Error(errorMessage(await res.text(), res.statusText));
+        return res.json() as Promise<AttemptResult>;
+      });
+    } catch {
+      // Client-side fallback if the API route is unreachable.
+      const { gradeAttempt } = await import("./quiz-engine");
+      return gradeAttempt({
+        mode: extra?.mode || "practice",
+        attempt_id: id,
+        answers: (answers || []) as {
+          question_id: string;
+          selected: number | null;
+          flagged?: boolean;
+          time_spent_sec?: number;
+        }[],
+        started_at: extra?.started_at,
+      }) as unknown as AttemptResult;
+    }
+  },
   getAttempt: async (id: number) => {
+    if (typeof window !== "undefined") {
+      const cached = sessionStorage.getItem(`result:${id}`);
+      if (cached) return JSON.parse(cached) as AttemptResult;
+    }
     const { getResult } = await import("./local-store");
     const local = getResult(id);
     if (local) return local as unknown as AttemptResult;

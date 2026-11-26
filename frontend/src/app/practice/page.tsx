@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Suspense, useState } from "react";
 import { api } from "@/lib/api";
@@ -90,6 +91,17 @@ function PracticeForm() {
               </button>
             ))}
           </div>
+          <p className="muted" style={{ fontSize: 13, margin: "10px 0 0" }}>
+            Review{" "}
+            <Link
+              href={topics.length === 1 ? `/traps?topic=${topics[0]}` : "/traps"}
+              style={{ fontWeight: 600 }}
+            >
+              exam traps
+            </Link>{" "}
+            for {topics.length === 1 ? TOPIC_META[topics[0]]?.short || "this section" : "all sections"}{" "}
+            before you start.
+          </p>
         </div>
 
         {mode !== "quick" && (

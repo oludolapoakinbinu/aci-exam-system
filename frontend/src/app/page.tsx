@@ -151,7 +151,7 @@ export default function HomePage() {
       </div>
 
       {topics.length === 5 && (
-        <div className="card-row" style={{ marginTop: 16, gridTemplateColumns: "repeat(2, 1fr)" }}>
+        <div className="card-row" style={{ marginTop: 16, gridTemplateColumns: "repeat(3, 1fr)" }}>
           <TopicCard
             title="Weak Areas"
             pct={stats.weak_subtopics.length ? 15 : 0}
@@ -162,8 +162,14 @@ export default function HomePage() {
             title="Flashcards"
             pct={0}
             href="/flashcards"
-            highlight
             meta={`${stats.total_flashcards} cards · Leitner boxes`}
+          />
+          <TopicCard
+            title="Exam Traps"
+            pct={0}
+            href="/traps"
+            highlight
+            meta="FME · FX · Rates · FICC · FMA"
           />
         </div>
       )}

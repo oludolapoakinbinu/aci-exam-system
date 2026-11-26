@@ -10,12 +10,14 @@ const MAIN = [
   { href: "/practice", label: "Practice Questions", icon: "✎" },
   { href: "/flashcards", label: "Flashcards", icon: "▣" },
   { href: "/formulas", label: "Formula Sheet", icon: "ƒ" },
+  { href: "/traps", label: "Exam Traps", icon: "⚠" },
   { href: "/history", label: "History", icon: "◷" },
 ];
 
 const HELP = [
   { href: "/practice?mode=weak", label: "Weak Areas", icon: "!" },
   { href: "/practice?mode=quick", label: "Quick 10", icon: "⚡" },
+  { href: "/traps", label: "All section traps", icon: "⚠" },
 ]
 
 export function AppShell({ children }: { children: ReactNode }) {

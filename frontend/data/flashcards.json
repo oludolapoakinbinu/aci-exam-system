@@ -1,0 +1,818 @@
+[
+  {
+    "id": "FC-001",
+    "topic": "fme",
+    "subtopic": "market-functions",
+    "front": "List 4 functions of financial markets.",
+    "back": "Price discovery; mobilisation of capital; provision of liquidity; transfer/distribution of risk (also: lower transaction costs, information, access, global allocation).",
+    "source": "ICAP Module 1"
+  },
+  {
+    "id": "FC-002",
+    "topic": "fme",
+    "subtopic": "code-of-conduct",
+    "front": "Is the FX Global Code legally binding?",
+    "back": "No — it is a voluntary set of principles of good practice, reinforced by Statements of Commitment and supervisory expectations, but not a statute by itself.",
+    "source": "FX Global Code"
+  },
+  {
+    "id": "FC-003",
+    "topic": "fme",
+    "subtopic": "code-of-conduct",
+    "front": "Name the FX Global Code principle themes (high level).",
+    "back": "Ethics; Governance; Execution; Information sharing; Risk management & compliance; Confirmation & settlement.",
+    "source": "FX Global Code"
+  },
+  {
+    "id": "FC-004",
+    "topic": "fme",
+    "subtopic": "settlement",
+    "front": "What risk does CLS mainly reduce?",
+    "back": "FX settlement (Herstatt) risk, via payment-versus-payment (PvP).",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-005",
+    "topic": "fme",
+    "subtopic": "aml-ethics",
+    "front": "Three stages of money laundering?",
+    "back": "Placement → Layering → Integration.",
+    "source": "Tutorial Letter 01"
+  },
+  {
+    "id": "FC-006",
+    "topic": "fme",
+    "subtopic": "regulation",
+    "front": "EMIR reporting timing for OTC & ETD?",
+    "back": "Both reported to trade repositories on a T+1 (following day) basis under EMIR rules taught in the materials.",
+    "source": "Workshop Topic 1"
+  },
+  {
+    "id": "FC-007",
+    "topic": "fme",
+    "subtopic": "efficient-markets",
+    "front": "Semi-strong EMH means prices reflect…?",
+    "back": "All publicly available information.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-008",
+    "topic": "fme",
+    "subtopic": "market-structure",
+    "front": "Primary vs secondary market?",
+    "back": "Primary: new issuance / capital raising. Secondary: trading of existing securities.",
+    "source": "Tutorial Letter 01"
+  },
+  {
+    "id": "FC-009",
+    "topic": "fme",
+    "subtopic": "central-banks",
+    "front": "Purpose of open-market operations?",
+    "back": "Manage banking-system liquidity and steer short-term interest rates.",
+    "source": "ICAP Module 1"
+  },
+  {
+    "id": "FC-010",
+    "topic": "fme",
+    "subtopic": "participants",
+    "front": "What does a market maker do?",
+    "back": "Quotes two-way prices, provides liquidity, and manages inventory/risk.",
+    "source": "ICAP Module 1"
+  },
+  {
+    "id": "FC-011",
+    "topic": "fx",
+    "subtopic": "fx-quotes",
+    "front": "In EUR/USD, which is base / quote?",
+    "back": "EUR is base; USD is quote. Price = USD per 1 EUR.",
+    "source": "Tutorial Letter 02"
+  },
+  {
+    "id": "FC-012",
+    "topic": "fx",
+    "subtopic": "fx-quotes",
+    "front": "Customer buys base currency — which side of the quote?",
+    "back": "The offer (ask) side of the market maker's quote.",
+    "source": "Tutorial Letter 02"
+  },
+  {
+    "id": "FC-013",
+    "topic": "fx",
+    "subtopic": "value-dates",
+    "front": "Standard spot value date for EUR/USD?",
+    "back": "T+2. (USD/CAD is typically T+1.)",
+    "source": "Tutorial Letter 02"
+  },
+  {
+    "id": "FC-014",
+    "topic": "fx",
+    "subtopic": "forward-points",
+    "front": "Ascending vs descending forward points?",
+    "back": "Ascending (low/high) = premium; descending (high/low) = discount (apply as negative).",
+    "source": "Tutorial Letter 02"
+  },
+  {
+    "id": "FC-015",
+    "topic": "fx",
+    "subtopic": "outright-forwards",
+    "front": "Outright ≈ ?",
+    "back": "Outright = Spot + Forward points (with correct sign and bid/offer side).",
+    "source": "Tutorial Letter 02"
+  },
+  {
+    "id": "FC-016",
+    "topic": "fx",
+    "subtopic": "fx-theory",
+    "front": "Covered interest parity intuition?",
+    "back": "Higher-yielding currency trades at a forward discount; points ≈ spot × interest differential × time.",
+    "source": "Tutorial Letter 02"
+  },
+  {
+    "id": "FC-017",
+    "topic": "fx",
+    "subtopic": "ndf",
+    "front": "How does an NDF settle?",
+    "back": "Cash settlement of the difference vs a fixing, usually in USD — no local-currency delivery.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-018",
+    "topic": "fx",
+    "subtopic": "precious-metals",
+    "front": "LBMA Good Delivery gold fineness & weight?",
+    "back": "Min fineness 0.995; gold content 350–430 fine troy oz (≈400 typical).",
+    "source": "ICAP Module 2"
+  },
+  {
+    "id": "FC-019",
+    "topic": "fx",
+    "subtopic": "precious-metals",
+    "front": "ISO codes XAU / XAG?",
+    "back": "XAU = gold; XAG = silver (also XPT platinum, XPD palladium).",
+    "source": "Tutorial Letter 02"
+  },
+  {
+    "id": "FC-020",
+    "topic": "fx",
+    "subtopic": "fx-swaps",
+    "front": "Sell/buy FX swap on base currency means you…?",
+    "back": "Lend the base / borrow the quote for the tenor (short base until far leg).",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-021",
+    "topic": "fx",
+    "subtopic": "cross-rates",
+    "front": "Multiplying cross with USD in the middle — bid side?",
+    "back": "Generally multiply bid × bid for the cross bid (and offer × offer for the offer), watching quote order.",
+    "source": "Tutorial Letter 02"
+  },
+  {
+    "id": "FC-022",
+    "topic": "fx",
+    "subtopic": "fx-risk",
+    "front": "Pre-settlement vs settlement risk?",
+    "back": "Pre-settlement: replacement cost if default before value date. Settlement: loss of principal on exchange day.",
+    "source": "Tutorial Letter 02"
+  },
+  {
+    "id": "FC-023",
+    "topic": "rates",
+    "subtopic": "day-counts",
+    "front": "ACT/360 currencies (examples)?",
+    "back": "USD, EUR, CHF, JPY (most money-market currencies).",
+    "source": "Tutorial Letter 03"
+  },
+  {
+    "id": "FC-024",
+    "topic": "rates",
+    "subtopic": "day-counts",
+    "front": "ACT/365 currencies (examples)?",
+    "back": "GBP, AUD, NZD, HKD, SGD, ZAR (and others).",
+    "source": "Tutorial Letter 03"
+  },
+  {
+    "id": "FC-025",
+    "topic": "rates",
+    "subtopic": "simple-compound",
+    "front": "Simple interest formula (money market)?",
+    "back": "I = P × r × days/basis.",
+    "source": "Tutorial Letter 03"
+  },
+  {
+    "id": "FC-026",
+    "topic": "rates",
+    "subtopic": "benchmarks",
+    "front": "EONIA vs €STR?",
+    "back": "EONIA was volume-weighted euro overnight; replaced by €STR (ECB) for new business from 2022.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-027",
+    "topic": "rates",
+    "subtopic": "benchmarks",
+    "front": "SOFR / SONIA / €STR / SARON / TONA — currencies?",
+    "back": "SOFR=USD, SONIA=GBP, €STR=EUR, SARON=CHF, TONA=JPY — overnight RFRs.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-028",
+    "topic": "rates",
+    "subtopic": "interpolation",
+    "front": "Straight-line rate interpolation?",
+    "back": "r = r1 + (t−t1)/(t2−t1) × (r2−r1).",
+    "source": "Practice exams"
+  },
+  {
+    "id": "FC-029",
+    "topic": "rates",
+    "subtopic": "forward-rates",
+    "front": "Forward-forward rate formula (ACT/360)?",
+    "back": "FF = {[1+r_L D_L/360]/[1+r_S D_S/360] − 1} × 360/(D_L−D_S).",
+    "source": "Tutorial Letter 03"
+  },
+  {
+    "id": "FC-030",
+    "topic": "rates",
+    "subtopic": "repo",
+    "front": "Classic repo coupon during term?",
+    "back": "Issuer pays buyer; buyer makes manufactured payment to seller.",
+    "source": "Tutorial Letter 03"
+  },
+  {
+    "id": "FC-031",
+    "topic": "rates",
+    "subtopic": "repo",
+    "front": "Classic repo vs undocumented sell/buy-back?",
+    "back": "Classic = one repo contract; undocumented SBB = two outright contracts.",
+    "source": "Practice Exam 1"
+  },
+  {
+    "id": "FC-032",
+    "topic": "rates",
+    "subtopic": "bonds",
+    "front": "Clean vs dirty bond price?",
+    "back": "Dirty = clean + accrued interest.",
+    "source": "Tutorial Letter 03"
+  },
+  {
+    "id": "FC-033",
+    "topic": "rates",
+    "subtopic": "discount-instruments",
+    "front": "Discount rate on a T-bill?",
+    "back": "d = ((F−P)/F) × (basis/days).",
+    "source": "Tutorial Letter 03"
+  },
+  {
+    "id": "FC-034",
+    "topic": "rates",
+    "subtopic": "yield-curve",
+    "front": "Normal yield curve shape?",
+    "back": "Upward sloping: longer tenors yield more than shorter tenors.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-035",
+    "topic": "rates",
+    "subtopic": "money-market-instruments",
+    "front": "Name three money-market instruments.",
+    "back": "Examples: interbank deposits, T-bills, CP, CDs, BAs, repo.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-036",
+    "topic": "ficc",
+    "subtopic": "fra",
+    "front": "What does 2x5 FRA mean?",
+    "back": "Forward rate from 2 months to 5 months (3-month underlying starting in 2 months).",
+    "source": "Tutorial Letter 04"
+  },
+  {
+    "id": "FC-037",
+    "topic": "ficc",
+    "subtopic": "fra",
+    "front": "FRA settlement (buyer) intuition?",
+    "back": "Buyer receives if fixing > FRA rate (discounted difference × notional × d/basis).",
+    "source": "Tutorial Letter 04"
+  },
+  {
+    "id": "FC-038",
+    "topic": "ficc",
+    "subtopic": "fra",
+    "front": "FRA settlement formula?",
+    "back": "N × (L−F) × d/basis / [1 + L×d/basis].",
+    "source": "Tutorial Letter 04"
+  },
+  {
+    "id": "FC-039",
+    "topic": "ficc",
+    "subtopic": "futures",
+    "front": "Eurodollar futures price vs rate?",
+    "back": "Price ≈ 100 − rate; each bp typically USD 25 per contract.",
+    "source": "Tutorial Letter 04"
+  },
+  {
+    "id": "FC-040",
+    "topic": "ficc",
+    "subtopic": "irs",
+    "front": "Payer swap = ?",
+    "back": "Pay fixed / receive floating.",
+    "source": "Tutorial Letter 04"
+  },
+  {
+    "id": "FC-041",
+    "topic": "ficc",
+    "subtopic": "ois",
+    "front": "OIS floating leg?",
+    "back": "Compounds overnight RFR (SOFR/SONIA/€STR/etc.) over the period.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-042",
+    "topic": "ficc",
+    "subtopic": "fx-options",
+    "front": "EUR call / USD put right?",
+    "back": "Right to buy EUR (sell USD) at the strike.",
+    "source": "Tutorial Letter 04"
+  },
+  {
+    "id": "FC-043",
+    "topic": "ficc",
+    "subtopic": "option-pricing",
+    "front": "Effect of higher IV on vanilla premiums?",
+    "back": "Raises both call and put premiums (positive vega).",
+    "source": "Tutorial Letter 04"
+  },
+  {
+    "id": "FC-044",
+    "topic": "ficc",
+    "subtopic": "option-strategies",
+    "front": "Long straddle components?",
+    "back": "Long call + long put (same strike/expiry).",
+    "source": "Workshop Options"
+  },
+  {
+    "id": "FC-045",
+    "topic": "ficc",
+    "subtopic": "ir-options",
+    "front": "Cap vs floor — who buys which?",
+    "back": "Borrowers buy caps (protection vs higher rates); investors/lenders buy floors.",
+    "source": "Tutorial Letter 04"
+  },
+  {
+    "id": "FC-046",
+    "topic": "ficc",
+    "subtopic": "ccs",
+    "front": "Cross-currency swap notionals?",
+    "back": "Usually exchanged at start and re-exchanged at maturity, with interest in each currency.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-047",
+    "topic": "fma",
+    "subtopic": "basel",
+    "front": "What is RWA?",
+    "back": "Risk-Weighted Assets — denominator of regulatory capital ratios.",
+    "source": "Workshop Risk"
+  },
+  {
+    "id": "FC-048",
+    "topic": "fma",
+    "subtopic": "basel",
+    "front": "LCR definition?",
+    "back": "HQLA / net cash outflows over a 30-day stress ≥ 100%.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-049",
+    "topic": "fma",
+    "subtopic": "basel",
+    "front": "NSFR definition?",
+    "back": "Available Stable Funding / Required Stable Funding over a 1-year horizon ≥ 100%.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-050",
+    "topic": "fma",
+    "subtopic": "basel",
+    "front": "ASF factor for common equity?",
+    "back": "100%.",
+    "source": "Workshop explanations"
+  },
+  {
+    "id": "FC-051",
+    "topic": "fma",
+    "subtopic": "basel",
+    "front": "Level 1 HQLA examples?",
+    "back": "Cash, central-bank reserves, 0% RW sovereigns (conditions apply). Covered bonds are not Level 1.",
+    "source": "Workshop Risk"
+  },
+  {
+    "id": "FC-052",
+    "topic": "fma",
+    "subtopic": "var",
+    "front": "VaR meaning?",
+    "back": "A loss threshold for a horizon/confidence level (e.g. 99% 1-day) — not the maximum possible loss.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-053",
+    "topic": "fma",
+    "subtopic": "alm",
+    "front": "Duration gap purpose?",
+    "back": "Measure sensitivity of equity/economic value to interest-rate changes.",
+    "source": "Workshop ALM"
+  },
+  {
+    "id": "FC-054",
+    "topic": "fma",
+    "subtopic": "gap-analysis",
+    "front": "Positive gap (asset sensitive) — rates up?",
+    "back": "Net interest income tends to rise.",
+    "source": "Workshop ALM"
+  },
+  {
+    "id": "FC-055",
+    "topic": "fma",
+    "subtopic": "credit-risk",
+    "front": "Expected loss ≈ ?",
+    "back": "PD × LGD × EAD.",
+    "source": "Workshop Risk"
+  },
+  {
+    "id": "FC-056",
+    "topic": "fma",
+    "subtopic": "credit-risk",
+    "front": "Wrong-way risk?",
+    "back": "Exposure rises as counterparty credit quality falls (positively correlated).",
+    "source": "Workshop Risk"
+  },
+  {
+    "id": "FC-057",
+    "topic": "fma",
+    "subtopic": "liquidity-risk",
+    "front": "Funding vs market liquidity risk?",
+    "back": "Funding: can't meet cash obligations. Market: can't exit positions without moving price.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-058",
+    "topic": "fma",
+    "subtopic": "operational-risk",
+    "front": "Basel operational risk?",
+    "back": "Loss from failed processes, people, systems, or external events (includes legal risk).",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-059",
+    "topic": "fma",
+    "subtopic": "transfer-pricing",
+    "front": "Matched-maturity FTP idea?",
+    "back": "Tenor-specific transfer rates reflecting marginal funding cost (+ liquidity premia).",
+    "source": "Workshop ALM"
+  },
+  {
+    "id": "FC-060",
+    "topic": "fma",
+    "subtopic": "market-risk",
+    "front": "IRRBB focuses on?",
+    "back": "Banking-book NII and economic-value sensitivity to interest-rate shocks.",
+    "source": "2025 Study Guide"
+  },
+  {
+    "id": "FC-061",
+    "topic": "fme",
+    "subtopic": "market-structure",
+    "front": "ACI Dealing Certificate exam format?",
+    "back": "70 MCQs, 2 hours. Pass 60% (42/70) with ≥50% in each topic basket. Merit 70%+, Distinction 80%+.",
+    "source": "2025 Study Guide intro"
+  },
+  {
+    "id": "FC-062",
+    "topic": "fme",
+    "subtopic": "market-structure",
+    "front": "Topic basket sizes on the exam?",
+    "back": "FME 10, FX 18, Rates 18, FICC 14, FMA 10 (=70). Min correct: 5, 9, 9, 7, 5.",
+    "source": "ICAP intro / ACI syllabus"
+  },
+  {
+    "id": "FC-063",
+    "topic": "fx",
+    "subtopic": "value-dates",
+    "front": "What is tom/next (T/N)?",
+    "back": "An FX swap from tomorrow to the spot date (next) — used to roll positions and derive value-tomorrow rates.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-064",
+    "topic": "fx",
+    "subtopic": "value-dates",
+    "front": "What is spot/next?",
+    "back": "An FX swap from spot to the following business day.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-065",
+    "topic": "fx",
+    "subtopic": "forward-points",
+    "front": "Pip vs pipette (EUR/USD)?",
+    "back": "A pip is usually the 4th decimal (0.0001); a pipette is a 5th decimal (0.00001). JPY pairs often use 2nd/3rd decimals.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-066",
+    "topic": "fx",
+    "subtopic": "ndf",
+    "front": "Why use NDFs?",
+    "back": "For currencies with convertibility/delivery constraints — hedge FX risk without delivering the non-convertible currency.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-067",
+    "topic": "fx",
+    "subtopic": "precious-metals",
+    "front": "Allocated vs unallocated loco account?",
+    "back": "Allocated: specific bars owned. Unallocated: claim on the bullion bank's general pool (most London OTC trading).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-068",
+    "topic": "fx",
+    "subtopic": "precious-metals",
+    "front": "Silver Good Delivery fineness?",
+    "back": "Minimum fineness 0.999; recommended weight about 750–1,100 troy oz (~1,000 typical).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-069",
+    "topic": "rates",
+    "subtopic": "benchmarks",
+    "front": "What was LIBOR conceptually?",
+    "back": "London Interbank Offered Rate — panel banks' offered interbank funding rates across tenors/currencies; largely replaced by RFRs.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-070",
+    "topic": "rates",
+    "subtopic": "benchmarks",
+    "front": "EURIBOR is…?",
+    "back": "Euro Interbank Offered Rate — unsecured euro term fixing from a panel (still used; reformed methodology).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-071",
+    "topic": "rates",
+    "subtopic": "repo",
+    "front": "General collateral (GC) vs special?",
+    "back": "GC: any issue from an accepted basket. Special: a specific ISIN in demand, often trading richer (lower repo rate).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-072",
+    "topic": "rates",
+    "subtopic": "repo",
+    "front": "Haircut / initial margin purpose?",
+    "back": "Protects the cash lender against collateral price falls — borrower delivers extra collateral value.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-073",
+    "topic": "rates",
+    "subtopic": "bonds",
+    "front": "Day-count often used for US Treasuries accrued?",
+    "back": "ACT/ACT (with specific conventions). Many eurobonds historically 30/360.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-074",
+    "topic": "rates",
+    "subtopic": "money-market-instruments",
+    "front": "CD vs deposit?",
+    "back": "Certificate of Deposit is typically transferable; interbank deposits are usually non-transferable bilateral loans.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-075",
+    "topic": "rates",
+    "subtopic": "forward-rates",
+    "front": "Break-even forward rate idea?",
+    "back": "The rate that equalises rolling short deposits vs locking a longer deposit — no-arbitrage forward-forward.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-076",
+    "topic": "ficc",
+    "subtopic": "futures",
+    "front": "Long Eurodollar futures = view on rates?",
+    "back": "Long futures profits when futures price rises ⇒ implied rate falls. Hedge for a future lender/investor.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-077",
+    "topic": "ficc",
+    "subtopic": "futures",
+    "front": "Short Eurodollar futures hedge?",
+    "back": "Hedge for a future borrower: profits when rates rise (futures price falls).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-078",
+    "topic": "ficc",
+    "subtopic": "irs",
+    "front": "Receiver swap = ?",
+    "back": "Receive fixed / pay floating.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-079",
+    "topic": "ficc",
+    "subtopic": "irs",
+    "front": "Are notionals exchanged on a standard single-currency IRS?",
+    "back": "No — only interest differentials are exchanged (net).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-080",
+    "topic": "ficc",
+    "subtopic": "option-pricing",
+    "front": "Delta of an option?",
+    "back": "Sensitivity of premium to a small move in the underlying price/rate.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-081",
+    "topic": "ficc",
+    "subtopic": "option-pricing",
+    "front": "Theta?",
+    "back": "Sensitivity of premium to the passage of time (time decay) — usually negative for long vanillas.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-082",
+    "topic": "ficc",
+    "subtopic": "option-strategies",
+    "front": "Risk reversal (FX)?",
+    "back": "Typically long OTM call + short OTM put (or reverse) — expresses skew / directional vol view.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-083",
+    "topic": "ficc",
+    "subtopic": "ir-options",
+    "front": "Collar for a borrower?",
+    "back": "Long cap + short floor — caps upside rate cost while giving up benefit below the floor strike.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-084",
+    "topic": "fma",
+    "subtopic": "basel",
+    "front": "Basel I headline capital ratio?",
+    "back": "Minimum capital (Tier 1+2) of 8% of risk-weighted assets for internationally active banks.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-085",
+    "topic": "fma",
+    "subtopic": "basel",
+    "front": "What is CCF?",
+    "back": "Credit Conversion Factor — converts certain off-balance-sheet items into on-balance credit exposure equivalents.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-086",
+    "topic": "fma",
+    "subtopic": "basel",
+    "front": "Standardized RW for many unrated corporates (classic teaching)?",
+    "back": "Often 100% (check current national tables — materials use this baseline).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-087",
+    "topic": "fma",
+    "subtopic": "var",
+    "front": "Historical simulation VaR?",
+    "back": "Revalues the portfolio using past return scenarios and reads the loss quantile — few distributional assumptions.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-088",
+    "topic": "fma",
+    "subtopic": "alm",
+    "front": "NII vs EVE?",
+    "back": "Net Interest Income: earnings over a horizon. Economic Value of Equity: PV of assets − liabilities sensitivity.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-089",
+    "topic": "fma",
+    "subtopic": "liquidity-risk",
+    "front": "HQLA means?",
+    "back": "High-Quality Liquid Assets eligible for the LCR (Level 1 / Level 2A / 2B with haircuts).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-090",
+    "topic": "fme",
+    "subtopic": "regulation",
+    "front": "Volcker Rule aim (as taught)?",
+    "back": "Limit proprietary trading and bank investments in hedge funds / private equity.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-091",
+    "topic": "fme",
+    "subtopic": "regulation",
+    "front": "Dodd-Frank high-level aim?",
+    "back": "Promote US financial stability via accountability/transparency and reduce taxpayer bailout risk.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-092",
+    "topic": "fme",
+    "subtopic": "regulation",
+    "front": "MiFID II applies broadly to…?",
+    "back": "Investment firms, venues, funds/managers and trading venues across EU financial markets (wholesale & retail perimeter).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-093",
+    "topic": "fme",
+    "subtopic": "code-of-conduct",
+    "front": "UK Money Markets Code covers?",
+    "back": "Wholesale unsecured deposits, repo and related UK money-market activity (not general retail transactional banking).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-094",
+    "topic": "fx",
+    "subtopic": "fx-quotes",
+    "front": "Cable means?",
+    "back": "Market slang for GBP/USD.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-095",
+    "topic": "rates",
+    "subtopic": "day-counts",
+    "front": "Interest on CHF deposit — basis?",
+    "back": "ACT/360.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-096",
+    "topic": "rates",
+    "subtopic": "simple-compound",
+    "front": "Compounding more frequently raises…?",
+    "back": "Effective annual yield versus a stated nominal rate with less frequent compounding.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-097",
+    "topic": "ficc",
+    "subtopic": "derivatives-general",
+    "front": "Exchange-traded vs OTC derivative?",
+    "back": "ETD: standardised, cleared, margined. OTC: bespoke, bilateral (increasingly cleared when mandated).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-098",
+    "topic": "fma",
+    "subtopic": "risk-general",
+    "front": "Seven major risk groups in FMA syllabus?",
+    "back": "Market, credit, liquidity, operational, legal, regulatory, reputational.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-099",
+    "topic": "fx",
+    "subtopic": "forward-points",
+    "front": "Value-tomorrow from spot and T/N?",
+    "back": "Adjust spot by the tom/next swap points (careful with bid/offer direction when moving earlier than spot).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-100",
+    "topic": "rates",
+    "subtopic": "repo",
+    "front": "Buy/sell-back documented variation/margin?",
+    "back": "If cash vs collateral values diverge significantly, adjustment is usually by re-pricing (vs variation margin on classic repo).",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-101",
+    "topic": "ficc",
+    "subtopic": "fra",
+    "front": "FRA settlement timing?",
+    "back": "Usually at the start of the FRA period (discounted); some markets may settle at end undiscounted — ACI teaches discounted start.",
+    "source": "ACI study materials"
+  },
+  {
+    "id": "FC-102",
+    "topic": "fma",
+    "subtopic": "basel",
+    "front": "NSFR ASF 0% examples?",
+    "back": "Many short-term financial liabilities, derivatives, trading liabilities — cannot be relied on as stable funding.",
+    "source": "ACI study materials"
+  }
+]

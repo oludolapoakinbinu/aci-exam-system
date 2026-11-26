@@ -1,0 +1,82 @@
+ACI DEALING CERTIFICATE (002-101) QUESTION BANK - AUTHORING SPEC
+================================================================
+
+Project root: /Users/dolapo/aci-exam-system
+Source text (already extracted from the PDFs): /Users/dolapo/aci-exam-system/source_text/*.txt
+Your output goes in: /Users/dolapo/aci-exam-system/data/raw/
+
+OUTPUT FILES (JSON arrays, UTF-8, pretty-printed):
+  data/raw/<BATCH>.questions.json
+  data/raw/<BATCH>.flashcards.json   (only if your task asks for flashcards)
+Write incrementally (e.g. every 20-30 questions append and re-save) so work is never lost.
+When done, run:  /Users/dolapo/aci-exam-system/.venv/bin/python /Users/dolapo/aci-exam-system/scripts/validate_raw.py data/raw/<BATCH>.questions.json
+and fix every error it reports.
+
+QUESTION OBJECT
+{
+  "id": "<BATCH>-001",                 // unique, BATCH prefix + 3-digit counter
+  "topic": "fme" | "fx" | "rates" | "ficc" | "fma",
+  "subtopic": "<one of the subtopic slugs below>",
+  "kind": "theory" | "calculation",
+  "difficulty": "easy" | "medium" | "hard",
+  "question": "Full question stem. Keep rate tables/data. Use \n for line breaks.",
+  "options": ["text of A", "text of B", "text of C", "text of D"],   // exactly 4, no 'A.' prefixes
+  "answer": 0,                         // index 0-3 of the CORRECT option (after your verification)
+  "explanation": "2-6 sentence note explaining WHY the answer is right (and why tempting wrong ones are wrong). For calculations show the formula and the working with numbers, ending with the result.",
+  "source": "e.g. 'ACI Practice Exam 3 Q42' / 'Workshop Exercise Book - FX Calculations Q7' / 'Tutorial Letter 02 - self-assessment Q5' / 'Original'",
+  "source_key": "B" | null,            // the answer letter the SOURCE's key gave (null if none / original)
+  "key_corrected": false,              // true if your verified answer differs from source_key
+  "correction_note": null              // if key_corrected, 1-2 sentences on why the source key is wrong
+}
+
+TOPICS / SUBTOPIC SLUGS (use these exact slugs)
+  fme  (Financial Markets Environment): market-functions, market-structure, participants,
+        efficient-markets, regulation, trade-lifecycle, settlement, code-of-conduct, economic-indicators,
+        central-banks, aml-ethics
+  fx   (Foreign Exchange): fx-quotes, cross-rates, value-dates, forward-points, outright-forwards,
+        fx-swaps, forward-forwards, ndf, precious-metals, fx-theory, fx-risk
+  rates (Money & Interest Rate Markets): day-counts, simple-compound, yield-conversion,
+        money-market-instruments, discount-instruments, benchmarks, interpolation, forward-rates,
+        yield-curve, bonds, repo, central-bank-ops
+  ficc (FICC Derivatives): fra, futures, irs, ois, ccs, fx-options, ir-options, option-pricing,
+        option-strategies, derivatives-general
+  fma  (Financial Markets Applications): alm, gap-analysis, duration, transfer-pricing,
+        market-risk, var, credit-risk, liquidity-risk, operational-risk, basel, risk-general
+
+RULES
+1. EVERY question must be verified. Do NOT trust answer keys blindly - several are known to be wrong.
+   - Calculations: actually compute the answer with python
+     (/Users/dolapo/aci-exam-system/.venv/bin/python -c "...") using ACI conventions
+     (money market ACT/360 for most currencies, ACT/365 for GBP, AUD, NZD, HKD, SGD, ZAR, ...;
+     bond conventions as stated; forward points = spot * (rv*d/basis_v - rb*d/basis_b)/(1+rb*d/basis_b), etc.).
+     If none of the 4 options matches your computation, pick the nearest one ONLY if the gap is
+     rounding; otherwise fix the question (adjust one option to the correct value) and note it.
+   - Theory: confirm against the course material in source_text (grep it). Where the material and
+     a key disagree, the material + current market practice win. Note: EONIA was replaced by €STR
+     (Jan 2022) and LIBOR has been replaced by RFRs (SOFR, SONIA, €STR, SARON, TONA) - questions
+     that only make sense historically may be kept but say so in the explanation.
+2. Mark key_corrected=true with a correction_note whenever your answer differs from the source key.
+3. Ignore OCR artefacts ("CS CamScanner", page numbers, headers). Repair obviously garbled OCR text.
+4. If a source question is genuinely broken (missing data, two correct answers, unrecoverable),
+   either repair it minimally so it is sound, or skip it - never emit an unsound question.
+5. Options must be distinct. Keep the original option order (so answer keys line up) unless you repair.
+6. Explanations are what students read after the exam. Make them clear, correct and short.
+7. ORIGINAL questions (when asked): exam-style 4-option MCQs, a single unambiguous answer,
+   plausible distractors (common mistakes: wrong day basis, bid/offer swapped, sign of points, etc.),
+   spread across the subtopics of your material, with a mix of theory/calculation and difficulty.
+   Randomise the position of the correct answer. source = "Original - based on <document/section>".
+
+FLASHCARD OBJECT (when asked)
+{
+  "id": "<BATCH>-FC-001",
+  "topic": "fme|fx|rates|ficc|fma",
+  "subtopic": "<slug>",
+  "front": "Concise prompt: a term, a formula to recall, a convention, or a short question",
+  "back": "Accurate answer (1-4 sentences, formulas welcome)",
+  "source": "document/section it came from"
+}
+Flashcards should cover definitions, conventions (day counts, spot dates, quoting), formulas, Basel/
+regulatory numbers, FX Global Code principles, and other memorisable facts from your material.
+
+FINAL MESSAGE TO PARENT: report counts (questions extracted, original, corrected keys, skipped with
+reasons, flashcards) and the list of key corrections (id + one line each). Keep it short.

@@ -1,0 +1,14 @@
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+node_modules/
+frontend/.next/
+tmp/
+data/aci.db
+data/aci.db-*
+*.png
+.cursor/
+
+# Local Netlify folder
+.netlify
